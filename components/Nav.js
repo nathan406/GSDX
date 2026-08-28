@@ -14,6 +14,9 @@ export default function Nav() {
           <Link href="/projects" className="transition hover:text-gold">
             Browse Projects
           </Link>
+          <Link href="/team" className="transition hover:text-gold">
+            Team
+          </Link>
         </nav>
       </div>
     </header>
