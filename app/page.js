@@ -288,13 +288,15 @@ export default function Home() {
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {team.map((person) => (
-              <div key={person.name} className="flex flex-col items-start">
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className="w-full max-w-md rounded-sm object-cover"
-                />
-                <p className="mt-4 font-display text-xl text-ink">{person.name}</p>
+              <div key={person.name} className="group rounded-sm border border-line bg-paper p-6 transition hover:border-gold">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <p className="mt-5 font-display text-xl text-ink">{person.name}</p>
                 <p className="mt-1 font-body text-sm text-ink/60">{person.role}</p>
               </div>
             ))}

@@ -11,15 +11,17 @@ export default function TeamPage() {
       <p className="font-mono text-xs uppercase tracking-[0.25em] text-clay">Team</p>
       <h1 className="mt-2 font-display text-3xl text-ink sm:text-4xl">The people building GSDX</h1>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="mt-10 grid gap-8 sm:grid-cols-2">
         {team.map((person) => (
-          <div key={person.name} className="rounded-sm border border-line p-6">
-            <img
-              src={person.image}
-              alt={person.name}
-              className="w-full rounded-sm object-cover"
-            />
-            <p className="mt-4 font-display text-lg text-ink">{person.name}</p>
+          <div key={person.name} className="rounded-sm border border-line bg-paper p-6 transition hover:border-gold">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+              <img
+                src={person.image}
+                alt={person.name}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <p className="mt-5 font-display text-xl text-ink">{person.name}</p>
             <p className="mt-1 font-body text-sm text-ink/60">{person.role}</p>
           </div>
         ))}
