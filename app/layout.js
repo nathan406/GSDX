@@ -6,6 +6,9 @@ export const metadata = {
   title: "GSDX — Global Sustainable Development Exchange",
   description:
     "A global development and capital-mobilization platform connecting developing countries with development finance, private investment, businesses, and citizens.",
+  other: {
+    "netlify-banners": "none",
+  },
 };
 
 export default function RootLayout({ children }) {
