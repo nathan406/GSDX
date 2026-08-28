@@ -1,8 +1,8 @@
 export const metadata = { title: "Team — GSDX" };
 
 const team = [
-  { name: "Niza Mbao", role: "Founder, Lead Developer, Researcher", image: "/images/niza.jpeg" },
-  { name: "Nathan Muyoba", role: "Senior Developer", image: "/images/nathan.png" },
+  { name: "Niza Mbao", role: "Founder", image: "/images/niza.jpeg" },
+  { name: "Nathan Muyoba", role: "Lead Developer", image: "/images/nathan.png" },
 ];
 
 export default function TeamPage() {
@@ -17,7 +17,7 @@ export default function TeamPage() {
             <img
               src={person.image}
               alt={person.name}
-              className="h-16 w-16 rounded-full object-cover"
+              className="w-full rounded-sm object-cover"
             />
             <p className="mt-4 font-display text-lg text-ink">{person.name}</p>
             <p className="mt-1 font-body text-sm text-ink/60">{person.role}</p>

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { stages, countries, projects } from "@/lib/data";
 
+const team = [
+  { name: "Niza Mbao", role: "Founder", image: "/images/niza.jpeg" },
+  { name: "Nathan Muyoba", role: "Lead Developer", image: "/images/nathan.png" },
+];
+
 const network = [
   { role: "Governments", detail: "Establish national development priorities and submit projects." },
   { role: "Development institutions", detail: "Provide funding, technical assistance, and expertise." },
@@ -269,6 +274,29 @@ export default function Home() {
                   {f.detail}
                 </p>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <SectionEyebrow>Team</SectionEyebrow>
+          <h2 className="mt-2 max-w-2xl font-display text-2xl text-ink sm:text-3xl">
+            The people building GSDX.
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {team.map((person) => (
+              <div key={person.name} className="flex flex-col items-start">
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="w-full max-w-md rounded-sm object-cover"
+                />
+                <p className="mt-4 font-display text-xl text-ink">{person.name}</p>
+                <p className="mt-1 font-body text-sm text-ink/60">{person.role}</p>
+              </div>
             ))}
           </div>
         </div>
