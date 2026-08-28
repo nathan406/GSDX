@@ -289,11 +289,11 @@ export default function Home() {
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {team.map((person) => (
               <div key={person.name} className="group rounded-sm border border-line bg-paper p-6 transition hover:border-gold">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-ink/5">
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 </div>
                 <p className="mt-5 font-display text-xl text-ink">{person.name}</p>
