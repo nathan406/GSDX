@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F2EA;
+  color: #0E2A24;
+}
+
+::selection {
+  background-color: #B8892B;
+  color: #F5F2EA;
+}
+
+:focus-visible {
+  outline: 2px solid #B8892B;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.readiness-ring {
+  transition: stroke-dashoffset 0.6s ease;
+}
